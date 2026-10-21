@@ -1,0 +1,42 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+  background: #8ecbff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#overlay {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(10, 15, 35, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.2s ease;
+}
+
+#overlay h1 {
+  margin: 0 0 6px 0;
+  font-size: 1.3rem;
+}
+
+#overlay p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+body.pointer-locked #overlay {
+  opacity: 0;
+}
